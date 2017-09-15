@@ -6,11 +6,12 @@ const http = require('http');
 // Files
 const routes = require('./routes');
 
+let port = process.env.PORT || 8080;
+
 http.createServer((request, response) => {
-  response.setHeader('Content-Type', 'application/json');
   routes.home(request, response);
   routes.user(request, response);
 })
-  .listen(8080);
+  .listen(port);
 
 console.log('serving...');

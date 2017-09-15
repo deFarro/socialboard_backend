@@ -24,6 +24,8 @@ const mapPosts = (calendar, period) => {
   return calendar.filter(date => date.getTime() >= point);
 }
 
+// Function to track activity in last 12 month.
+
 const mapPostsCalendar = (calendar, range = 12, now = new Date()) => {
   const postsPerMonth = [];
   const calendarWithDates = calendar.map(date => new Date(date));

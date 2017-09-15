@@ -4,6 +4,12 @@ const User = require('./fetchUser');
 
 const SOCIAL = ['twitter', 'facebook', 'instagram'];
 
+const headers = {
+  'Access-Control-Allow-Origin': 'http://socialboard.host22.com',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Content-Type': 'application/json'
+};
+
 const home = (request, response) => {
   if (request.url === '/') {
     response.end('Add social network and user ID after backslash in URL.');
@@ -29,6 +35,7 @@ const user = (request, response) => {
     const user = new User(social, id);
     try {
       const strUser = JSON.stringify(user);
+      response.writeHead(200, headers);
       response.end(strUser);
     }
     catch(err) {

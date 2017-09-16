@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/deFarro/socialboard_backend/issues"
   },
-  "homepage": "https://github.com/deFarro/socialboard_backend#readme"
+  "homepage": "https://github.com/deFarro/socialboard_backend#readme",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
 }

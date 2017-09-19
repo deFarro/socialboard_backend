@@ -15,4 +15,4 @@ Works in a mock mode:
 ### Tech stack:
 * Node.js
 * Express
-* MongoDB
+* Mongoose
